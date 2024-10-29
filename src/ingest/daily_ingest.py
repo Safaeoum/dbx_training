@@ -50,7 +50,7 @@ spark.sql(f"""
             DELETE FROM dbx_training.{schema}.bronze_objets_trouves 
             WHERE Date LIKE '{date_filter}%'
             """)
-#result = spark.sql(f"SELECT * FROM dbx_training.{schema}.bronze_objets_trouves WHERE Date LIKE '2024-04-11%'")
+#result = spark.sql(f"SELECT * FROM dbx_training.{schema}.bronze_objets_trouves WHERE Date LIKE '{date_filter}%'")
 
 # Append new data to the bronze table
 df_data_yesterday.write.mode("append").saveAsTable(f"dbx_training.{schema}.bronze_objets_trouves")
