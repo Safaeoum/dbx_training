@@ -4,6 +4,11 @@ version = "1.0.0"
 description = "Safae OUMAMI"
 authors = ["Safae OUMAMI"]
 readme = "README.md"
+packages = [{ include = "training_objets_trouves", from = "src"}]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src/training_objets_trouves"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
