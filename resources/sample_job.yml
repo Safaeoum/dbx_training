@@ -1,0 +1,13 @@
+resources:
+  jobs:
+    example_training_objets_trouves_job:
+      name: Example Training Objets Trouves Job
+      
+      tasks:
+        - task_key: task_main
+          python_wheel_task:
+            entry_point: task_main
+            package_name: training_objets_trouves
+          existing_cluster_id: 1021-130351-jk1so0sp
+          libraries:
+            - whl: ../dist/*.whl

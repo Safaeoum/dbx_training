@@ -1,18 +1,15 @@
 [tool.poetry]
 name = "training-objets-trouves"
 version = "1.0.0"
-description = "Safae OUMAMI"
+description = ""
 authors = ["Safae OUMAMI"]
 readme = "README.md"
-packages = [{ include = "training_objets_trouves", from = "src"}]
 
-[tool.pytest.ini_options]
-testpaths = ["tests"]
-pythonpath = ["src/training_objets_trouves"]
+[tool.poetry.scripts]
+task_main = "training_objets_trouves.main:main"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.3"
@@ -21,7 +18,6 @@ ruff = "^0.7.1"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
-
 
 [tool.ruff]
 line-length = 90
@@ -48,5 +44,12 @@ skip-magic-trailing-comma = false
 line-ending = "auto"
 
 
-[tool.poetry.scripts]
-task_main = "src.training_objets_trouves.main:main"
+
+
+
+
+
+
+
+
+

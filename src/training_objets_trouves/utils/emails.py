@@ -3,7 +3,6 @@ def get_initials(email: str) -> str:
     Return initials based on cluster creator
     Args:
         email (str): The email address from which to extract initials.
- 
     Returns:
         str: A string of initials formed from the local part of the email.
     """

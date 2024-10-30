@@ -1,0 +1,18 @@
+bundle:
+  name: training_objets_trouves
+
+include:
+  - resources/*.yml
+
+artifacts:
+  default:
+    type: whl
+    build: poetry build
+    path: .
+
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace:
+      host: https://adb-2601780855408318.18.azuredatabricks.net
